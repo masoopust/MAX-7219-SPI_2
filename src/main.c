@@ -74,7 +74,7 @@ int main(void)
 {
   
     uint32_t time = 0;
-    uint8_t number = 187;
+    uint16_t number = 187;
 
     init();
 
