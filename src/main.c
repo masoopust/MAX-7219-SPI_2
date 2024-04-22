@@ -83,7 +83,14 @@ int main(void)
     display(INTENSITY, 1);             // chci intenzitu 1, aby to málo svítilo
     display(DISPLAY_TEST, DISPLAY_TEST_OFF);
     display(SHUTDOWN,SHUTDOWN_ON);
-
+    display(DIGIT0,0x0F);
+    display(DIGIT1,0x0F);
+    display(DIGIT2,0x0F);
+    display(DIGIT3,0x0F);
+    display(DIGIT4,0x0F);           //Zhasne digit 4 a další obdobně
+    display(DIGIT5,0x0F);
+    display(DIGIT6,0x0F);
+    display(DIGIT7,0x0F);
     while (1) {
         if (milis() - time > 333) {
             time = milis();
