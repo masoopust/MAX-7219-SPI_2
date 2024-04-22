@@ -74,7 +74,7 @@ int main(void)
 {
   
     uint32_t time = 0;
-    uint8_t number = 0;
+    uint8_t number = 187;
 
     init();
 
@@ -93,8 +93,12 @@ int main(void)
     display(DIGIT7,0x0F);
     while (1) {
         if (milis() - time > 333) {
-            time = milis();
-            display(DIGIT0, number++);
+            time = milis(); 
+            /* zobrazování libovolného 3-cif. čísla*/
+            display(DIGIT2, number/100);
+            number = number%100;
+            display(DIGIT1, number/10);
+            display(DIGIT0, number%10);
         }
     }
 }
